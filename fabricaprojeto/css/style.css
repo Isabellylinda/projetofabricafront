@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +8,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 450;
     background-color: #52057B; /* Cor roxa do fundo */
     color: #fff; /* Cor do texto branca */
     display: flex;
@@ -21,7 +24,7 @@ body {
     border-radius: 10px;
     padding: 50px;
     width: 800px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
@@ -82,7 +85,7 @@ body {
 }
 
 .info-text {
-    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     margin-bottom: 5px;
 }
