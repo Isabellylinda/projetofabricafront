@@ -19,7 +19,7 @@ body {
     flex-direction: column;
     background-color: #52057B;
     border-radius: 10px;
-    padding: 50px;
+    padding: 90px;
     width: 800px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -130,4 +130,11 @@ body {
 }
 
 
+p{
+    font-family: 'Montserrat', sans-serif;
+}
+.top-icons.p{
+ 
+    font-family: 'Montserrat', sans-serif;
 
+}
