@@ -123,7 +123,6 @@ body {
 
 .back-button {
     padding: 10px 20px;
-    background-color: #696969;
     border: none;
     border-radius: 20px;
     color: #fff;
@@ -135,4 +134,8 @@ body {
 
 .top-icons{
     font-family: 'Montserrat', sans-serif;
+}
+
+.back-button{
+    background-color: #6C6060
 }

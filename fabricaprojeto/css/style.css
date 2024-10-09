@@ -115,11 +115,14 @@ body {
 
 .back-button {
     padding: 10px 20px;
-    background-color: #696969;
     border: none;
     border-radius: 20px;
     color: #fff;
     cursor: pointer;
     align-self: flex-end;
     margin-top: 20px;
+}
+
+.back-button{
+    background-color: #6C6060
 }
