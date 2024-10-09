@@ -97,7 +97,7 @@ body {
 
 .input-text {
     background-color: #ccc;
-    color: #000;
+    color: #fff;
     padding: 10px;
     border-radius: 5px;
     width: 100%; /* Garante que ocupe todo o espaço dentro da wrapper */
@@ -113,16 +113,21 @@ body {
     margin-left: -30px; /* Ajuste para garantir que o ícone fique bem próximo ao campo de texto */
 }
 
-.back-button {
+.back-button,
+.cont-button {
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
-    color: #fff;
     cursor: pointer;
     align-self: flex-end;
     margin-top: 20px;
 }
 
 .back-button{
-    background-color: #6C6060
+   background-color: #6C6060; 
+   color: #fff;
+}
+.cont-button{
+    background-color: #737373;
+    color: #fff;
 }
