@@ -120,15 +120,22 @@ body {
     cursor: pointer;
 }
 
-
 .back-button {
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
+    background-color: #6C6060; 
     color: #fff;
     cursor: pointer;
     align-self: flex-end; 
     margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.back-button:hover {
+    background-color: #4D4D4D;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
 }
 
 

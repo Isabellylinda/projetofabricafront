@@ -123,11 +123,33 @@ body {
     margin-top: 20px;
 }
 
-.back-button{
-   background-color: #6C6060; 
-   color: #fff;
-}
-.cont-button{
+.back-button {
+    background-color: #6C6060; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+ }
+ 
+ .back-button:hover {
+    background-color: #4D4D4D;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+ }
+ 
+ .cont-button {
     background-color: #737373;
     color: #fff;
-}
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+ }
+ 
+ .cont-button:hover {
+    background-color: #595959;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+ }
+ 

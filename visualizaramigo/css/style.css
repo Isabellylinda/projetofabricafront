@@ -105,6 +105,7 @@ body {
     cursor: pointer;
 }
 
+
 .back-button,
 .comment-button {
     padding: 10px 20px;
@@ -112,17 +113,28 @@ body {
     border-radius: 20px;
     color: #fff;
     cursor: pointer;
-    align-self: flex-end; 
     margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.back-button {
+    background-color: #6C6060;
+    align-self: flex-end;
+}
+
+.back-button:hover {
+    background-color: #4D4D4D;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
 }
 
 .comment-button {
-    align-self: flex-start; /* Para alinhar o botão à esquerda */
-    margin-top: 10px; /* Pequeno espaçamento acima do botão */
-}
-.comment-button{
     background-color: #737373;
+    align-self: flex-start;
 }
-.back-button{
-    background-color: #6C6060
+
+.comment-button:hover {
+    background-color: #595959;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
 }
