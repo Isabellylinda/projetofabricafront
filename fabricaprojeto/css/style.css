@@ -55,8 +55,9 @@ body {
 .profile-picture img {
     background-color: #6C6060;
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 270px;
+    height: 270px;
+    
 }
 
 .right-container {
