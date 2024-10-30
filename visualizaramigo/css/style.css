@@ -28,6 +28,39 @@ body {
     position: relative;
 }
 
+/* Responsividade */
+@media (max-width: 800px) {
+    .container {
+        width: 95%; /* Reduzir a largura para 95% em telas menores */
+        padding: 40px; /* Diminuir o padding */
+    }
+
+    .content {
+        flex-direction: column; /* Alterar a direção para coluna em telas menores */
+        margin-top: 10px; /* Reduzir a margem superior */
+    }
+
+    .left-container,
+    .right-container {
+        width: 100%; /* Fazer as seções ocuparem 100% da largura */
+    }
+
+    .profile-picture img {
+        width: 120px; /* Diminuir a largura da imagem */
+        height: 120px; /* Diminuir a altura da imagem */
+    }
+
+    .input-text {
+        width: 100%; /* Fazer o campo de entrada ocupar toda a largura disponível */
+        margin-right: 0; /* Remover margem à direita */
+    }
+
+    .back-button, .comment-button {
+        width: 100%; /* Botões ocupam 100% da largura */
+        margin-top: 10px; /* Ajustar margem superior */
+    }
+}
+
 .top-icons {
     display: flex;
     justify-content: flex-end;
@@ -104,7 +137,6 @@ body {
     height: 20px;
     cursor: pointer;
 }
-
 
 .back-button,
 .comment-button {
