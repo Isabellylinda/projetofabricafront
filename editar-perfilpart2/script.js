@@ -1,45 +1,3 @@
-const saveButton = document.getElementById('cont-button'); 
-saveButton.onclick = () => {
-   
-    const alertBox = document.createElement('div');
-    alertBox.textContent = 'Suas mudanças foram salvas com sucesso!';
-    alertBox.style.position = 'fixed';
-    alertBox.style.top = '50%';
-    alertBox.style.left = '50%';
-    alertBox.style.transform = 'translate(-50%, -50%)';
-    alertBox.style.padding = '30px';
-    alertBox.style.backgroundColor = '#474747';
-    alertBox.style.color = '#fff';
-    alertBox.style.borderRadius = '10px';
-    alertBox.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.3)';
-    alertBox.style.fontSize = '18px';
-    alertBox.style.width = '300px';
-    alertBox.style.textAlign = 'center';
-    alertBox.style.zIndex = '1000';
-
-   
-    const okButton = document.createElement('button');
-    okButton.textContent = 'OK';
-    okButton.style.marginTop = '20px';
-    okButton.style.padding = '10px 20px';
-    okButton.style.border = 'none';
-    okButton.style.borderRadius = '5px';
-    okButton.style.backgroundColor = '#737373';
-    okButton.style.color = '#FFFBFB';
-    okButton.style.cursor = 'pointer';
-
-    
-    okButton.onclick = () => {
-        document.body.removeChild(alertBox);
-    };
-
-    
-    alertBox.appendChild(okButton);
-
-    
-    document.body.appendChild(alertBox);
-};
-
 
 const trashButton = document.getElementById('trash-button');
 const nameInput = document.getElementById('name');
@@ -186,3 +144,42 @@ sairConta.onclick = () => {
     document.body.appendChild(confirmBox);
 };
 
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('profile-form');
+    const contButton = document.getElementById('cont-button');
+    const nameField = document.getElementById('name');
+    const emailField = document.getElementById('email');
+
+    contButton.addEventListener('click', (event) => {
+        // Impede o envio do formulário se a validação falhar
+        event.preventDefault();
+
+        // Variáveis para armazenar as mensagens de erro
+        let isValid = true;
+        let errorMessage = '';
+
+        // Validação do nome
+        if (!nameField.value.trim()) {
+            isValid = false;
+            errorMessage += 'O nome é obrigatório.\n';
+        }
+
+        // Validação do email (verifica se está vazio e se o formato está correto)
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (!emailField.value.trim()) {
+            isValid = false;
+            errorMessage += 'O email é obrigatório.\n';
+        } else if (!emailRegex.test(emailField.value.trim())) {
+            isValid = false;
+            errorMessage += 'O email não tem um formato válido.\n';
+        }
+
+        // Se a validação falhar, mostrar mensagem de erro
+        if (!isValid) {
+            alert(errorMessage);
+        } else {
+            // Caso a validação seja bem-sucedida, envie o formulário ou execute outra ação
+            form.submit();
+        }
+    });
+});
