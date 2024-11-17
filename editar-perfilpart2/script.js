@@ -151,20 +151,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailField = document.getElementById('email');
 
     contButton.addEventListener('click', (event) => {
-        // Impede o envio do formulário se a validação falhar
+        
         event.preventDefault();
 
-        // Variáveis para armazenar as mensagens de erro
+        
         let isValid = true;
         let errorMessage = '';
 
-        // Validação do nome
+        
         if (!nameField.value.trim()) {
             isValid = false;
             errorMessage += 'O nome é obrigatório.\n';
         }
 
-        // Validação do email (verifica se está vazio e se o formato está correto)
+       
         const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
         if (!emailField.value.trim()) {
             isValid = false;
@@ -174,11 +174,11 @@ document.addEventListener('DOMContentLoaded', () => {
             errorMessage += 'O email não tem um formato válido.\n';
         }
 
-        // Se a validação falhar, mostrar mensagem de erro
+        
         if (!isValid) {
             alert(errorMessage);
         } else {
-            // Caso a validação seja bem-sucedida, envie o formulário ou execute outra ação
+            
             form.submit();
         }
     });
